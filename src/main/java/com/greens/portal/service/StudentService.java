@@ -4,5 +4,5 @@ import com.greens.portal.model.Student;
 
 public interface StudentService {
 
-	public Student studentRegistration(Student student);
+	public boolean studentRegistration(Student student);
 }

@@ -12,9 +12,10 @@ public class StudentServiceImpl implements StudentService {
 
 	@Autowired
 	public StudentRepository studentRepository;
-	
+
 	@Override
-	public Student studentRegistration(Student student) {
-		return studentRepository.save(student);
+	public boolean studentRegistration(Student student) {
+		Student stuSvData = studentRepository.save(student);
+		return (stuSvData != null) ? true : false;
 	}
 }
